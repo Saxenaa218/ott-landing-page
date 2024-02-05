@@ -26,6 +26,7 @@
       "@components/*": ["src/components/*"],
       "@state": ["src/state"],
       "@common": ["src/common"],
+      "@hooks/*": ["src/hooks/*"],
     }
   },
   "include": ["src"],

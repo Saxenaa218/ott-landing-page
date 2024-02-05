@@ -6,9 +6,11 @@ const axiosInstance = axios.create({
   baseURL: BASE_URL,
 });
 
-export const getPageDetails = async (): Promise<PageDetails> => {
+export const getPageDetails = async (
+  pageNumber: number
+): Promise<PageDetails> => {
   const response: AxiosResponse<PageDetails> = await axiosInstance.get(
-    "/data/page1.json"
+    `/data/page${pageNumber}.json`
   );
   return response.data;
 };
