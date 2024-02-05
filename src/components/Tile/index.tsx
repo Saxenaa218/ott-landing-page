@@ -7,7 +7,7 @@ const Tile: FC<Tile> = ({ "poster-image": posterImage, name }) => {
   const imageUrl = `${BASE_URL}/images/${posterImage}`;
   return (
     <>
-      <img src={imageUrl} alt={name} loading="lazy" />
+      <img src={imageUrl} alt={name} loading="lazy" className="w-full" />
       <p className="mt-1">{name}</p>
     </>
   );
