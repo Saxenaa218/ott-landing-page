@@ -1,30 +1,22 @@
-# React + TypeScript + Vite
+# Content listing category page
+This is a content listing page, with the below features -
+- search
+- lazy loading of images
+- infinite scrolling of pages
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tech used
 
-Currently, two official plugins are available:
+- [Jotai] for easy yet powerful state management solution
+- [Typescript] - for type checking and lesser bugs
+- [SWC] - an alternative for babel to transpile the code to make it compatible for browsers
+- [TailwindCSS] - for faster UI creation
+- [React] - for optimised rendering and ability to create a larger web app with performance we need
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
 
-## Expanding the ESLint configuration
+Install the dependencies and start the server.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```sh
+cd content-listing
+npm i && npm run dev
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
