@@ -17,11 +17,10 @@ const NavBar = () => {
   }, [searchMode]);
 
   return (
-    <nav className="flex justify-between items-center mt-3 mb-5 mx-1">
+    <nav className="flex justify-between items-center pt-3 mb-5 mx-1">
       <div className="flex items-center gap-5">
         <img
           src="https://test.create.diagnal.com/images/Back.png"
-          loading="lazy"
           alt="back button"
           className="w-5 h-fit"
           onClick={() => searchMode && setSearchMode(false)}

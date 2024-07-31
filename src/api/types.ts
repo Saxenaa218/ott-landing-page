@@ -1,4 +1,4 @@
-export type Tile = {
+export type TileType = {
   name: string;
   "poster-image": string;
 };
@@ -10,7 +10,7 @@ export type PageContent = {
   "page-size-requested": string;
   "page-size-returned": string;
   "content-items": {
-    content: Tile[];
+    content: TileType[];
   };
 };
 

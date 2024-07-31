@@ -5,7 +5,7 @@ import TileViewer from "./components/TileViewer";
 
 const App: FC = () => {
   return (
-    <div className="px-3 pb-5">
+    <div className="px-3 pb-5 font-titillium bg-black text-white">
       <NavBar />
       <TileViewer />
     </div>

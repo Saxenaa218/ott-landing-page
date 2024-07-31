@@ -35,11 +35,11 @@ const TileViewer = () => {
     <div className="grid grid-cols-3 gap-x-3 gap-y-6 tiles-view">
       {tiles?.map((tile, index) =>
         index === tiles.length - 1 ? (
-          <div ref={lastElementRef}>
+          <div ref={lastElementRef} key={tile.name + index}>
             <Tile name={tile.name} poster-image={tile["poster-image"]} />
           </div>
         ) : (
-          <div>
+          <div key={tile.name + index}>
             <Tile name={tile.name} poster-image={tile["poster-image"]} />
           </div>
         )

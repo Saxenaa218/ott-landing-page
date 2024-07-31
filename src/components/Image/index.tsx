@@ -23,7 +23,6 @@ const ImageWrapper: React.FC<ImageWrapperProps> = ({
       src={error ? fallbackSrc : src}
       alt={alt}
       onError={handleImageError}
-      loading="lazy"
       {...props}
     />
   );

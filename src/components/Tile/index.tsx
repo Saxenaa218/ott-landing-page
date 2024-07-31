@@ -1,10 +1,14 @@
 import { FC } from "react";
 
 import { BASE_URL } from "@common";
-import { Tile } from "src/api/types";
+import { TileType } from "src/api/types";
 import ImageWrapper from "@components/Image";
 
-const Tile: FC<Tile> = ({ "poster-image": posterImage, name }) => {
+const Tile: FC<Omit<TileType, "id">> = ({
+  "poster-image": posterImage,
+  name,
+  ...props
+}) => {
   const imageUrl = `${BASE_URL}/images/${posterImage}`;
   const fallbackImageUrl =
     BASE_URL + "/images/placeholder_for_missing_posters.png";
@@ -15,6 +19,7 @@ const Tile: FC<Tile> = ({ "poster-image": posterImage, name }) => {
         alt={name}
         className="w-full"
         fallbackSrc={fallbackImageUrl}
+        {...props}
       />
       <p className="mt-1">{name}</p>
     </>
